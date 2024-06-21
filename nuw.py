@@ -53,8 +53,10 @@ def generate_wordcloud(word_counts):
                 relative_scaling=0.5,
                 normalize_plurals=False,
                 collocations=False,
-                scale=3,  # 增加 scale 参数
-                max_font_size=100  # 增加 max_font_size 参数
+                scale=3,
+                max_font_size=120,
+                min_font_size=10,
+                background_color='white'  # 设置背景颜色
             ).generate_from_frequencies(word_counts)
             plt.figure(figsize=(10, 5))
             plt.imshow(wordcloud, interpolation='bilinear')
